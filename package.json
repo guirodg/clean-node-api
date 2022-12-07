@@ -6,9 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "lint-staged": {
+    "*.js": [
+      "standard --fix",
+      "git add"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/guirodg/clean-node-api.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +28,8 @@
   },
   "homepage": "https://github.com/guirodg/clean-node-api#readme",
   "devDependencies": {
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
     "standard": "^17.0.0"
   }
 }
