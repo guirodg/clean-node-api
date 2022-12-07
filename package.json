@@ -4,22 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "lint-staged": {
-    "*.js": [
-      "standard --fix",
-      "git add"
-    ]
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/guirodg/clean-node-api.git"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "author": "",
   "license": "ISC",
